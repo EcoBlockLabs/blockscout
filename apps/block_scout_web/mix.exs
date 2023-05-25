@@ -73,6 +73,7 @@ defmodule BlockScoutWeb.Mixfile do
       # The current `absinthe_relay` is compatible though as shown from that PR
       {:ecto, "~> 3.3", override: true},
       {:ex_cldr, "~> 2.7"},
+      {:ex_cldr_plugs, "~> 1.2"},
       {:ex_cldr_numbers, "~> 2.6"},
       {:ex_cldr_units, "~> 3.13"},
       {:cldr_utils, "~> 2.3"},

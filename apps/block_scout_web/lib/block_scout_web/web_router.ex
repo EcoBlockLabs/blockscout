@@ -10,6 +10,11 @@ defmodule BlockScoutWeb.WebRouter do
   pipeline :browser do
     plug(:accepts, ["html"])
     plug(:fetch_session)
+	plug(Cldr.Plug.PutLocale,
+		apps: [:cldr, :gettext],
+		from: [:query, :session, :accept_language],
+		gettext: BlockScoutWeb.Gettext,
+		cldr: BlockScoutWeb.Cldr)
     plug(:fetch_flash)
     plug(:protect_from_forgery)
     plug(BlockScoutWeb.CSPHeader)
