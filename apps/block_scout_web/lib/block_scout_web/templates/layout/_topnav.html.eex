@@ -155,6 +155,15 @@
             <% end %>
           </div>
         </li>
+        <li class="nav-item dropdown">
+          <a href="#" role="button" id="navbarLocaleDropdown" class="nav-link topnav-nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= gettext("Language") %>
+          </a>
+          <div class="dropdown-menu" aria-labeledby="navbarLocaleDropdown">
+            <a href="#" id="locale-selection-en" onclick="window.setLocale('en')" class="dropdown-item"><%= gettext("English") %></a>
+            <a href="#" id="locale-selection-zh" onclick="window.setLocale('zh')" class="dropdown-item"><%= gettext("Chinese") %></a>
+          </div>
+        </li>
         <!-- Dark mode changer -->
         <button class="dark-mode-changer" id="dark-mode-changer">
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">

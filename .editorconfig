@@ -1,0 +1,24 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+tab_width = 2
+end_of_line = lf
+charset = utf-8
+insert_final_newline = true
+
+[*.{js,ts,tsx,xml,yaml,yml,json}]
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+[*.sol]
+indent_style = space
+
+[*.md]
+indent_style = space
+
+[Makefile]
+indent_style = tab
+
