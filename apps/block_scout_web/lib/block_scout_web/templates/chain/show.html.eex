@@ -9,6 +9,8 @@
             <span><%= gettext("There was a problem loading the chart.") %></span>
           </button>
           <canvas data-chart="historyChart"
+                  data-tx_chart_title="<%= gettext "Daily Transactions" %>"
+                  data-market_chart_title="<%= gettext "Daily price and market cap" %>"
                   data-history_chart_paths=
                   '{<%= for {{key, value}, x} <- Enum.with_index(@chart_data_paths) do %>
                         "<%= key %>":"<%= value %>"

@@ -199,7 +199,7 @@ const priceLineColor = getPriceChartColor()
 const mcapLineColor = getMarketCapChartColor()
 
 class MarketHistoryChart {
-  constructor (el, availableSupply, _marketHistoryData, dataConfig) {
+  constructor (el, availableSupply, _marketHistoryData, dataConfig, txChartTitle, marketChartTitle) {
     const axes = config.options.scales
 
     let priceActivated = true
@@ -262,8 +262,8 @@ class MarketHistoryChart {
 
     this.availableSupply = availableSupply
 
-    const txChartTitle = 'Daily transactions'
-    const marketChartTitle = 'Daily price and market cap'
+    txChartTitle = txChartTitle ? txChartTitle : 'Daily transactions'
+    marketChartTitle = marketChartTitle ? marketChartTitle : 'Daily price and market cap'
     let chartTitle = ''
     if (Object.keys(dataConfig).join() === 'transactions') {
       chartTitle = txChartTitle
@@ -306,9 +306,11 @@ class MarketHistoryChart {
 export function createMarketHistoryChart (el) {
   const dataPaths = $(el).data('history_chart_paths')
   const dataConfig = $(el).data('history_chart_config')
+  const txChartTitle = $(el).data('tx_chart_title')
+  const marketChartTitle = $(el).data('market_chart_title')
 
   const $chartError = $('[data-chart-error-message]')
-  const chart = new MarketHistoryChart(el, 0, [], dataConfig)
+  const chart = new MarketHistoryChart(el, 0, [], dataConfig, txChartTitle, marketChartTitle)
   Object.keys(dataPaths).forEach(function (historySource) {
     $.getJSON(dataPaths[historySource], { type: 'JSON' })
       .done(data => {
