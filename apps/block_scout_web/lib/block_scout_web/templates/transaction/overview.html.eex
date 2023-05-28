@@ -434,7 +434,7 @@ end %>
             </dt>
             <dd class="col-sm-9 col-lg-10">
               <%= format_gas_limit(@transaction.gas_used_for_l1) %>
-              <%= if Decimal.cmp(@transaction.gas_used, 0) != :eq,
+              <%= if Decimal.compare(@transaction.gas_used, 0) != :eq,
                   do: "| " <> Decimal.to_string(Decimal.round(Decimal.div(
                       Decimal.mult(100, @transaction.gas_used_for_l1),
                       @transaction.gas_used), 2)) <> "%",
@@ -452,7 +452,7 @@ end %>
             <dd class="col-sm-9 col-lg-10">
               <%= format_gas_limit(Decimal.sub(@transaction.gas_used, @transaction.gas_used_for_l1)) %>
               <%=
-                if Decimal.cmp(@transaction.gas_used, 0) != :eq,
+                if Decimal.compare(@transaction.gas_used, 0) != :eq,
                 do: "| " <> Decimal.to_string(Decimal.round(Decimal.div(
                     Decimal.mult(100, Decimal.sub(@transaction.gas_used, @transaction.gas_used_for_l1)),
                     @transaction.gas_used), 2)) <> "%",

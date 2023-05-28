@@ -8,93 +8,71 @@ msgstr ""
 "Language: zh-CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#:
 msgid "can't be blank"
 msgstr "不能为空"
 
-#:
 msgid "has already been taken"
 msgstr "已有人带走了"
 
-#:
 msgid "is invalid"
 msgstr "是无效的"
 
-#:
 msgid "must be accepted"
 msgstr "必须接受"
 
-#:
 msgid "has invalid format"
 msgstr "格式无效"
 
-#:
 msgid "has an invalid entry"
 msgstr "有一个无效条目"
 
-#:
 msgid "is reserved"
 msgstr "被预定了"
 
-#:
 msgid "does not match confirmation"
 msgstr "不匹配确认"
 
-#:
 msgid "is still associated with this entry"
 msgstr "仍与此条目关联"
 
-#:
 msgid "are still associated with this entry"
 msgstr "仍与此条目关联"
 
-#:
 msgid "should be %{count} character(s)"
 msgid_plural "should be %{count} character(s)"
 msgstr[0] "应该是 %{count} 个字符"
 
-#:
 msgid "should have %{count} item(s)"
 msgid_plural "should have %{count} item(s)"
 msgstr[0] "应该有 %{count} 项"
 
-#:
 msgid "should be at least %{count} character(s)"
 msgid_plural "should be at least %{count} character(s)"
 msgstr[0] "应该至少有 %{count} 个字符"
 
-#:
 msgid "should have at least %{count} item(s)"
 msgid_plural "should have at least %{count} item(s)"
 msgstr[0] "应该至少有 %{count} 项"
 
-#:
 msgid "should be at most %{count} character(s)"
 msgid_plural "should be at most %{count} character(s)"
 msgstr[0] "最多应有 %{count} 个字符"
 
-#:
 msgid "should have at most %{count} item(s)"
 msgid_plural "should have at most %{count} item(s)"
 msgstr[0] "最多应该有 %{count} 个项目"
 
-#:
 msgid "must be less than %{number}"
 msgstr "必须小于 %{number}"
 
-#:
 msgid "must be greater than %{number}"
 msgstr "必须大于 %{number}"
 
-#:
 msgid "must be less than or equal to %{number}"
 msgstr "必须小于或等于 %{number}"
 
-#:
 msgid "must be greater than or equal to %{number}"
 msgstr "必须大于或等于 %{number}"
 
-#:
 msgid "must be equal to %{number}"
 msgstr "必须等于 %{number}"
-
