@@ -6,13 +6,13 @@
 <% type =
    case @transaction.type do
    2 -> "EIP-1559 (2)"
-   100 -> "Deposit into Arbitrum (100)"
+   100 -> "Deposit into EcoBlock (100)"
    101 -> "Bridge Unsigned Transaction (101)"
    102 -> "Bridge Contract Transaction (102)"
    104 -> "Retryable Execution (104)"
    105 -> "Retryable Submission (105)"
-   106 -> "ArbOS Internal Transaction (106)"
-   120 -> "Arbitrum Legacy Transaction (120)"
+   106 -> "EcoOS Internal Transaction (106)"
+   120 -> "EcoBlock Legacy Transaction (120)"
    _ -> @transaction.type
 end %>
 <% classic = @transaction.type == 120 %>
