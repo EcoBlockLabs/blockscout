@@ -24,7 +24,7 @@ services:
   blockscout:
     depends_on:
       - db
-      - smart-contract-verifier
+#      - smart-contract-verifier
       - redis_db
     image: blockscout/blockscout:${DOCKER_TAG:-latest}
     build:
@@ -56,14 +56,14 @@ services:
     volumes:
       - ./logs/:/app/logs/
 
-  smart-contract-verifier:
-    image: ghcr.io/blockscout/smart-contract-verifier:${SMART_CONTRACT_VERIFIER_DOCKER_TAG:-latest}
-    restart: always
-    container_name: 'smart-contract-verifier'
-    env_file:
-      -  ./envs/common-smart-contract-verifier.env
-    ports:
-      - 8043:8043
+#  smart-contract-verifier:
+#    image: ghcr.io/blockscout/smart-contract-verifier:${SMART_CONTRACT_VERIFIER_DOCKER_TAG:-latest}
+#    restart: always
+#    container_name: 'smart-contract-verifier'
+#    env_file:
+#      -  ./envs/common-smart-contract-verifier.env
+#    ports:
+#      - 8043:8043
 
   visualizer:
     image: ghcr.io/blockscout/visualizer:${VISUALIZER_DOCKER_TAG:-latest}
